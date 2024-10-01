@@ -6,21 +6,21 @@ const sequelize =require("../config/connection.js");
 const Customer = sequelize.define(
     "Customer",{
         id_customer: {
-            type:DataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
         name: {
-            type:DataTypes.STRING(45),
+            type: DataTypes.STRING(45),
             allowNull: false,
         },
         last_names: {
-            type:DataTypes.STRING(45),
+            type: DataTypes.STRING(45),
             allowNull:false,
         },
         phone_number: {
-            type:DataTypes.STRING(12),
+            type: DataTypes.STRING(12),
             allowNull:false,
         },
         CURP: {
