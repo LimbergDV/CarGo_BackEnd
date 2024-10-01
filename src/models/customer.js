@@ -35,5 +35,9 @@ const Customer = sequelize.define(
             type: DataTypes.DATE,
             allowNull: false
         }
+    },
+    {
+        tableName: "customers",
+        timestamps: false,
     }
 );

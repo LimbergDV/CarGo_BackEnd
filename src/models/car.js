@@ -31,5 +31,9 @@ const car = sequelize.define(
             type:DataTypes.STRING(8),
             allowNull: false,
         },
+    },
+    {
+        tableName: "cars",
+        timestamps: false,
     }
 );

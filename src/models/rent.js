@@ -20,6 +20,26 @@ const rent = sequelize.define(
         total_price: {
             type: DataTypes.INTEGER,
             allowNull: false,
-        }
+        },
+        id_customer: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references:{
+                model: "customers",
+                key: "id_customer"
+            },
+        },
+        id_car:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references:{
+                model: "cars",
+                key: "id_car"
+            },
+        },
+    },
+    {
+        tableName: "rent",
+        timestamps: false,
     }
 );
