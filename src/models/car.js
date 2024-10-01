@@ -1,6 +1,6 @@
 //Import dependencies
 const {DataTypes} = require("sequelize");
-const sequelize = require("../config/connection.js")
+const sequelize = require("../config/connection.js");
 
 //Define Table CAR
 
@@ -13,7 +13,7 @@ const car = sequelize.define(
         },
         brand:{
             type: DataTypes.INTEGER(45),
-            allowNull:false,
+            allowNull: false,
         },
         model:{
             type: DataTypes.STRING(45),
@@ -25,7 +25,7 @@ const car = sequelize.define(
         },
         type_car: {
             type: DataTypes.STRING,
-            allowNull:false,
+            allowNull: false,
         },
         plate_number:{
             type:DataTypes.STRING(8),

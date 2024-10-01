@@ -17,11 +17,11 @@ const Customer = sequelize.define(
         },
         last_names: {
             type: DataTypes.STRING(45),
-            allowNull:false,
+            allowNull: false,
         },
         phone_number: {
             type: DataTypes.STRING(12),
-            allowNull:false,
+            allowNull: false,
         },
         CURP: {
             type: DataTypes.STRING(18),
