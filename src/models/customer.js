@@ -27,7 +27,7 @@ const Customer = sequelize.define(
             type: DataTypes.STRING(18),
             allowNull: false,
         },
-        number_licese:{
+        number_license:{
             type: DataTypes.INTEGER(15),
             allowNull: false,
         },
@@ -41,3 +41,5 @@ const Customer = sequelize.define(
         timestamps: false,
     }
 );
+
+module.exports= Customer;

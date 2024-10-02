@@ -2,10 +2,11 @@
 const {DataTypes} = require("sequelize");
 const sequelize = require("../config/connection.js");
 
-const rent = sequelize.define(
-    "rent",{
+const Rent = sequelize.define(
+    "Rent",{
         id_car:{
             type: DataTypes.INTEGER,
+            primaryKey: true,
             allowNull: false,
             autoIncrement: true,
         },
@@ -43,3 +44,5 @@ const rent = sequelize.define(
         timestamps: false,
     }
 );
+
+module.exports=Rent;

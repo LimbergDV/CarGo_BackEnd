@@ -4,10 +4,11 @@ const sequelize = require("../config/connection.js");
 
 //Define Table CAR
 
-const car = sequelize.define(
-    "car",{
+const Car = sequelize.define(
+    "Car",{
         id_car:{
             type: DataTypes.INTEGER,
+            primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
@@ -37,3 +38,5 @@ const car = sequelize.define(
         timestamps: false,
     }
 );
+
+module.exports = Car;
