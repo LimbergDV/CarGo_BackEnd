@@ -1,10 +1,8 @@
-//Import dependencies
-const {DataTypes} = require("sequelize");
-const sequelize = require("../config/connection.js");
+module.exports= (sequelize, DataTypes)=>{
 
 const Rent = sequelize.define(
     "Rent",{
-        id_car:{
+        id_rent:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
@@ -39,10 +37,8 @@ const Rent = sequelize.define(
             },
         },
     },
-    {
-        tableName: "rent",
-        timestamps: false,
-    }
-);
+    {timestamps: false});
 
-module.exports=Rent;
+    
+    return Rent;
+};

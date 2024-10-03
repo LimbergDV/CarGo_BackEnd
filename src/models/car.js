@@ -1,9 +1,6 @@
-//Import dependencies
-const {DataTypes} = require("sequelize");
-const sequelize = require("../config/connection.js");
+module.exports= (sequelize, DataTypes)=>{
 
 //Define Table CAR
-
 const Car = sequelize.define(
     "Car",{
         id_car:{
@@ -32,11 +29,8 @@ const Car = sequelize.define(
             type:DataTypes.STRING(8),
             allowNull: false,
         },
-    },
-    {
-        tableName: "cars",
-        timestamps: false,
-    }
-);
+    }, {timestamps: false});
 
-module.exports = Car;
+
+    return Car;
+};

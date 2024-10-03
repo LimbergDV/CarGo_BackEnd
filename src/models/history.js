@@ -1,6 +1,4 @@
-//Import dependencies
-const {DataTypes} = require("sequelize");
-const sequelize = require("../config/connection.js");
+module.exports= (sequelize, DataTypes)=>{
 
 const History = sequelize.define(
     "History",{
@@ -26,7 +24,9 @@ const History = sequelize.define(
             type: DataTypes.TEXT,
             allowNull: true
         }
-    }
-);
+    }, {timestamps: false});
 
-module.exports = History;
+
+    return History;
+
+};
