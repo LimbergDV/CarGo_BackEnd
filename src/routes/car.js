@@ -17,3 +17,4 @@ router.put('/updateCar/:id', carController.updateCar);
 //eliminar
 router.delete('/deleteCar/:id', carController.deleateCar);
 
+module.exports=router;

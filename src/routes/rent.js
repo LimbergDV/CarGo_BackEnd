@@ -17,3 +17,4 @@ router.put('/updateRent/:id', rentController.updateRent);
 //eliminar
 router.delete('/deleteRent/:id', rentController.deleateRent);
 
+module.exports=router;

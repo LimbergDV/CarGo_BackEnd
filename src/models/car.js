@@ -10,7 +10,7 @@ const Car = sequelize.define(
             autoIncrement: true
         },
         brand:{
-            type: DataTypes.INTEGER(45),
+            type: DataTypes.STRING(45),
             allowNull: false,
         },
         model:{
@@ -18,18 +18,18 @@ const Car = sequelize.define(
             allowNull: false,
         },
         year: {
-            type: DataTypes.DATE,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         type_car: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(35),
             allowNull: false,
         },
         plate_number:{
             type:DataTypes.STRING(8),
             allowNull: false,
         },
-    }, {timestamps: false});
+    }, {tableName: "car", timestamps: false});
 
 
     return Car;

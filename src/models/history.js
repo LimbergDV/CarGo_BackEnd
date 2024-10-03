@@ -23,8 +23,17 @@ const History = sequelize.define(
         comments:{
             type: DataTypes.TEXT,
             allowNull: true
+        },
+        id_rent:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references:{
+                model: "rent",
+                key:"id_rent"
+            }
         }
-    }, {timestamps: false});
+
+    }, {tableName: "history",timestamps: false});
 
 
     return History;

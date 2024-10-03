@@ -9,11 +9,11 @@ const Rent = sequelize.define(
             autoIncrement: true,
         },
         start_date:{
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false
         },
         end_date: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false,
         },
         total_price: {
@@ -24,7 +24,7 @@ const Rent = sequelize.define(
             type: DataTypes.INTEGER,
             allowNull: false,
             references:{
-                model: "customers",
+                model: "customer",
                 key: "id_customer"
             },
         },
@@ -32,12 +32,12 @@ const Rent = sequelize.define(
             type: DataTypes.INTEGER,
             allowNull: false,
             references:{
-                model: "cars",
+                model: "car",
                 key: "id_car"
             },
         },
     },
-    {timestamps: false});
+    {tableName: "rent",timestamps: false});
 
     
     return Rent;

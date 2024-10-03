@@ -17,3 +17,4 @@ router.put('/updateCustomer/:id', customerController.updateCustomer);
 //eliminar
 router.delete('/deleteCustomer/:id', customerController.deleateCustomer);
 
+module.exports=router;

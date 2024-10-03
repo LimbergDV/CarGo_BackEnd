@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = requiere('body-parser');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 const customerRoutes = require('./routes/customer');
 const carRoutes = require('./routes/car');
@@ -16,6 +16,6 @@ app.use(bodyParser.json());
 //Cargar las rutas
 app.use('/car', carRoutes);
 app.use('/customer', customerRoutes);
-app.use('./rent', rentRoutes);
+app.use('/rent', rentRoutes);
 
 module.exports = app;

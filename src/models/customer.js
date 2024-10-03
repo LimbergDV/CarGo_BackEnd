@@ -26,16 +26,18 @@ const Customer = sequelize.define(
             allowNull: false,
         },
         number_license:{
-            type: DataTypes.INTEGER(15),
+            type: DataTypes.STRING(18),
             allowNull: false,
         },
         birthdate: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false
         }
     },
-    {timestamps: false});
+    {tableName: "customer",timestamps: false});
 
     
     return Customer;
 };
+
+
