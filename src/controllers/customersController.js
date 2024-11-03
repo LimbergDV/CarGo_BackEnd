@@ -3,12 +3,11 @@ const Customer = db.customer;
 
 exports.createCustomer = async (req, res) =>{
     try {
-        console.log('Request Body', req, res);
-        const newCustomer = await Customer.create(req.body);
+        const { name, last_names, phone_number, CURP, number_license, birthdate } = req.body;
+        const newCustomer = await Customer.create({ name, last_names, phone_number, CURP, number_license, birthdate });
         res.status(201).json(newCustomer)
     } catch (err) {
-        console.log(err);
-        return res.status(500).json(`Error al crear el cliente`);
+        return console.log(`Error al crear el cliente ${err}`);
     }
 };
 
@@ -38,14 +37,13 @@ exports.getCustomerById = async (req, res) => {
 exports.updateCustomer = async (req, res) => {
     const {id} = req.params;
     const updatedCustomerData = req.body;
+    console.log(req.body);
+    
     try {
         const [updatedRows]= await Customer.update(updatedCustomerData,{
             where: {id_customer: id}
         });
 
-        if (updatedRows === 0) {
-            return res.status(404).json({message: 'Cliente no encontrado'});
-        }
         const updatedCustomer = await Customer.findByPk(id);
         res.status(200).json(updatedCustomer);
     } catch (err) {

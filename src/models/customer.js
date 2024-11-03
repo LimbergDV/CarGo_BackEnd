@@ -30,7 +30,7 @@ const Customer = sequelize.define(
             allowNull: false,
         },
         birthdate: {
-            type: DataTypes.DATEONLY,
+            type: DataTypes.STRING,
             allowNull: false
         }
     },

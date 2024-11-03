@@ -6,7 +6,7 @@ const rentController = require('../controllers/rentController');
 router.post('/addRent', rentController.createRent);
 
 //obtener todos las rentas
-router.get('/getRents', rentController.getAllRents);
+router.get('/getAllRents', rentController.getAllRents);
 
 //obtener un renta por ID
 router.get('/getRents/:id', rentController.getRentById);

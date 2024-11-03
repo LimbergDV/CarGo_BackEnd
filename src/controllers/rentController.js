@@ -14,7 +14,7 @@ exports.createRent = async (req, res) =>{
 
 exports.getAllRents = async (req, res) => {
     try {
-        const Rents = await Rents.findAll();
+        const Rents = await Rent.findAll();
         res.json(Rents)
     } catch (err) {
         console.log(err);

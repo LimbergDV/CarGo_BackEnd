@@ -29,6 +29,10 @@ const Car = sequelize.define(
             type:DataTypes.STRING(8),
             allowNull: false,
         },
+        price_day: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        }
     }, {tableName: "car", timestamps: false});
 
 
